@@ -1,0 +1,13 @@
+<div class="container">
+  <div id="<%= @product.id %>">
+  <div id="product-image">
+    <%= image_tag @product.image_url, :size => "300x300" %>
+  </div>
+  <div id="product-list">
+    <% @product.tag_list.split(",").each do |tag| %>
+      <div>
+        <%= tag %>
+      </div>
+    <% end %>
+  </div>
+</div>

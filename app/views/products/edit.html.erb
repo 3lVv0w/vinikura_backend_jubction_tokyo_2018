@@ -1,0 +1,13 @@
+<div class="container">
+  <%= form_for @product do |p| %>
+    <div class="form-group">
+      <%= p.label "upload product image" %>
+      <%= p.file_field :image, class: "form-control-file" %>
+    </div>
+    <div class="form-group">
+      <%= p.label "add tag" %>
+      <%= p.text_field :tag_list, multiple: true, class: "form-control" %>
+    </div>
+    <%= p.submit %>
+  <% end %>
+</div>
