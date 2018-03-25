@@ -13,8 +13,9 @@ module API
               data: {
                 id: p.id,
                 uuid: p.uuid,
-                image: p.image_url,
+                images: p.images_urls,
                 tags: p.tag_list.split(","),
+                sell_status: p.sell_status,
                 created: p.created_at,
                 updated: p.updated_at
               }
@@ -39,8 +40,9 @@ module API
               data: {
                 id: result.id,
                 uuid: result.uuid,
-                image: result.image_url,
+                images: result.images_urls,
                 tags: result.tag_list.split(","),
+                sell_status: result.sell_status,
                 created: result.created_at,
                 updated: result.updated_at
               }
