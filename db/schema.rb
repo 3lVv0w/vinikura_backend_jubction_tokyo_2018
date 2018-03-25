@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20180324021946) do
 
   create_table "products", force: :cascade do |t|
     t.string   "uuid",        limit: 255
-    t.string   "image",       limit: 255
+    t.string   "images",      limit: 255
     t.string   "sell_status", limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false

@@ -2,7 +2,7 @@
   <%= form_for @product, :html => { :multipart => true }  do |p| %>
     <div class="form-group">
       <%= p.label "Upload Product Image" %>
-      <%= p.file_field :image, class: "form-control-file" %>
+      <%= p.file_field :images, multiple: true, class: "form-control-file" %>
     </div>
     <div class="form-group">
       <%= p.label "Add Tag" %>
@@ -11,7 +11,7 @@
 
     <div class="btn-group" data-toggle="buttons-radio">
       <%= p.label "Sellable" %>
-      <%= p.radio_button :sell_status, "Sellable" %>
+      <%= p.radio_button :sell_status, "Sellable", checked: "checked" %>
 
       <%= p.label "Reject" %>
       <%= p.radio_button :sell_status, "Reject"%>
